@@ -1,0 +1,15 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "serve": "lerna run serve --parallel",
+    "build-package": "lerna run build --parallel",
+    "build": "npm run build-package && npm run move",
+    "move": "node move.js",
+    "clean": "lerna clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "fs-extra": "^9.0.1",
+    "lerna": "^3.22.1"
+  }
+}
